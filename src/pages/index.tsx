@@ -9,13 +9,18 @@ const Home: React.FC = () => {
       <TitleH1>Framer Motion</TitleH1>
       <ListUl>
         <li>
+          <Link href="/sample-animation">
+            <ListA>sample animation</ListA>
+          </Link>
+        </li>
+        <li>
           <Link href="/sample-keyframes">
             <ListA>sample keyframes</ListA>
           </Link>
         </li>
         <li>
-          <Link href="/sample-animation">
-            <ListA>sample animation</ListA>
+          <Link href="/sample-gesture">
+            <ListA>sample gesture</ListA>
           </Link>
         </li>
       </ListUl>
