@@ -18,7 +18,7 @@ const Page: React.FC = () => {
             toggleOpen();
           }}
         >
-          {isOpen ? "閉じる" : "開く"}
+          {isOpen ? "close" : "open"}
         </StyledButton>
         <Navigation />
       </MainDiv>
@@ -38,11 +38,15 @@ const WrapperDiv = styled.div`
 `;
 
 const StyledButton = styled.button`
+  margin-bottom: 16px;
+  font-size: 1.6rem;
   background: none;
   border: none;
-  margin-bottom: 16px;
   &:focus {
     outline: none;
+  }
+  &:hover {
+    opacity: 0.5;
   }
 `;
 

@@ -1,33 +1,40 @@
 import React from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 import { Color } from "../constants/Color";
+
+const pages = [
+  "sample-animation",
+  "sample-keyframes",
+  "sample-gesture",
+  "sample-variants",
+];
 
 const Home: React.FC = () => {
   return (
     <WrapperDiv>
       <TitleH1>Framer Motion</TitleH1>
       <ListUl>
-        <li>
-          <Link href="/sample-animation">
-            <ListA>sample animation</ListA>
-          </Link>
-        </li>
-        <li>
-          <Link href="/sample-keyframes">
-            <ListA>sample keyframes</ListA>
-          </Link>
-        </li>
-        <li>
-          <Link href="/sample-gesture">
-            <ListA>sample gesture</ListA>
-          </Link>
-        </li>
-        <li>
-          <Link href="/sample-variants">
-            <ListA>sample variants</ListA>
-          </Link>
-        </li>
+        {pages.map((page, index) => (
+          <li key={index}>
+            <Link href={page}>
+              <ListA
+                animate={{
+                  backgroundSize: ["0%", "0%", "100%"],
+                  opacity: [0, 1, 1],
+                }}
+                transition={{
+                  duration: 1.5,
+                  ease: "easeInOut",
+                  times: [0, 0.5, 1],
+                }}
+              >
+                {page.replace("-", " ")}
+              </ListA>
+            </Link>
+          </li>
+        ))}
       </ListUl>
     </WrapperDiv>
   );
@@ -51,11 +58,15 @@ const ListUl = styled.ul`
   margin-top: 16px;
 `;
 
-const ListA = styled.a`
+const ListA = styled(motion.a)`
   display: inline-block;
   margin-bottom: 8px;
   line-height: 1.5;
-  background: linear-gradient(transparent 85%, ${Color.ACCENT_COLOR_1} 85%);
+  background-image: linear-gradient(
+    transparent 85%,
+    ${Color.ACCENT_COLOR_1} 85%
+  );
+  background-repeat: no-repeat;
   transition: color ease-out 0.3s;
   &:hover {
     color: ${Color.FONT_ACCENT_COLOR1};
