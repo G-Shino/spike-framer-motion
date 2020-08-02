@@ -13,6 +13,11 @@ const Home: React.FC = () => {
             <ListA>sample keyframes</ListA>
           </Link>
         </li>
+        <li>
+          <Link href="/sample-animation">
+            <ListA>sample animation</ListA>
+          </Link>
+        </li>
       </ListUl>
     </WrapperDiv>
   );
@@ -38,7 +43,9 @@ const ListUl = styled.ul`
 
 const ListA = styled.a`
   display: inline-block;
-  background: linear-gradient(transparent 80%, ${Color.ACCENT_COLOR_1} 80%);
+  margin-bottom: 8px;
+  line-height: 1.5;
+  background: linear-gradient(transparent 85%, ${Color.ACCENT_COLOR_1} 85%);
   transition: color ease-out 0.3s;
   &:hover {
     color: ${Color.FONT_ACCENT_COLOR1};
