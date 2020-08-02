@@ -10,8 +10,8 @@ const globalCSS = css`
 
   body {
     color: ${Color.FONT_COLOR};
-    font-size: 1.4rem;
-    font-family: "Jost", "YuGothic", "Yu Gothic", "游ゴシック", "Meiryo",
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", "YuGothic", "Yu Gothic", "游ゴシック", "Meiryo",
       "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
       -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     background-color: ${Color.BASE_COLOR};
@@ -20,6 +20,27 @@ const globalCSS = css`
   ul,
   ol {
     list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
   }
 `;
 
