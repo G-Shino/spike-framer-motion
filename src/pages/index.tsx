@@ -23,6 +23,11 @@ const Home: React.FC = () => {
             <ListA>sample gesture</ListA>
           </Link>
         </li>
+        <li>
+          <Link href="/sample-variants">
+            <ListA>sample variants</ListA>
+          </Link>
+        </li>
       </ListUl>
     </WrapperDiv>
   );
