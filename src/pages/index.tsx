@@ -1,42 +1,42 @@
 import React from "react";
 import Link from "next/link";
-import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 import { Color } from "../constants/Color";
 
 const Home: React.FC = () => {
   return (
-    <div css={WrapperDiv}>
-      <h1 css={TitleH1}>Framer Motion</h1>
-      <ul css={ListUl}>
+    <WrapperDiv>
+      <TitleH1>Framer Motion</TitleH1>
+      <ListUl>
         <li>
           <Link href="/sample-keyframes">
-            <a css={ListA}>sample keyframes</a>
+            <ListA>sample keyframes</ListA>
           </Link>
         </li>
-      </ul>
-    </div>
+      </ListUl>
+    </WrapperDiv>
   );
 };
 
 export default Home;
 
-const WrapperDiv = css`
+const WrapperDiv = styled.div`
   width: 80%;
   margin: 32px auto;
 `;
 
-const TitleH1 = css`
+const TitleH1 = styled.h1`
   display: inline-block;
   padding-left: 1rem;
   border-left: 1rem solid ${Color.MAIN_COLOR};
   vertical-align: middle;
 `;
 
-const ListUl = css`
+const ListUl = styled.ul`
   margin-top: 16px;
 `;
 
-const ListA = css`
+const ListA = styled.a`
   display: inline-block;
   background: linear-gradient(transparent 80%, ${Color.ACCENT_COLOR_1} 80%);
   transition: color ease-out 0.3s;
