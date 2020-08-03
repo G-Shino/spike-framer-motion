@@ -17,6 +17,10 @@ const Home: React.FC = () => {
   return (
     <WrapperDiv>
       <TitleH1>Framer Motion</TitleH1>
+      <p>
+        sample-dragで2.0.0以前のversionだとhomeに戻る時errorが出る <br />
+        一方で、2.0.0以上だとsample-motion-valuesが機能しない
+      </p>
       <ListUl>
         {pages.map((page, index) => (
           <li key={index}>
@@ -52,6 +56,7 @@ const WrapperDiv = styled.div`
 const TitleH1 = styled.h1`
   display: inline-block;
   padding-left: 1rem;
+  margin-bottom: 16px;
   border-left: 1rem solid ${Color.MAIN_COLOR};
   vertical-align: middle;
 `;

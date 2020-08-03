@@ -10,11 +10,7 @@ const Page: React.FC<any> = () => {
     "linear-gradient(180deg, #7700ff 0%, #4400ff 100%)",
     "linear-gradient(180deg, #e6ff00 0%, #03d100 100%)",
   ]);
-  const borderColor = useTransform(x, xInput, [
-    "#d30918",
-    "#4400ff",
-    "#03d100",
-  ]);
+  const color = useTransform(x, xInput, ["#d30918", "#4400ff", "#03d100"]);
   React.useEffect(() => {
     console.log("x", x);
     console.log("bg", background);
@@ -27,7 +23,7 @@ const Page: React.FC<any> = () => {
         drag="x"
         dragConstraints={{ left: -320, right: 320 }}
       >
-        <CircleDiv style={{ borderColor }} />
+        <CircleDiv style={{ borderColor: color, color }}>← →</CircleDiv>
       </MainDiv>
     </WrapperDiv>
   );
@@ -47,9 +43,6 @@ const MainDiv = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-  top: calc(50% - 160px / 2);
-  left: calc(50% - 160px / 2); */
   width: 160px;
   height: 160px;
   background-color: white;
@@ -57,6 +50,9 @@ const MainDiv = styled(motion.div)`
 `;
 
 const CircleDiv = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
   border: solid 8px;
