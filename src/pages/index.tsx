@@ -10,6 +10,7 @@ const pages = [
   "sample-gesture",
   "sample-variants",
   "sample-drag",
+  "sample-motion-values",
 ];
 
 const Home: React.FC = () => {
