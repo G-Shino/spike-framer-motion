@@ -9,6 +9,7 @@ const pages = [
   "sample-keyframes",
   "sample-gesture",
   "sample-variants",
+  "sample-drag",
 ];
 
 const Home: React.FC = () => {
