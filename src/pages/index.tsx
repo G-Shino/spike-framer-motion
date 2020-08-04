@@ -11,6 +11,7 @@ const pages = [
   "sample-variants",
   "sample-drag",
   "sample-motion-values",
+  "sample-viewport-scroll",
 ];
 
 const Home: React.FC = () => {
