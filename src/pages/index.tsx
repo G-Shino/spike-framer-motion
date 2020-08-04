@@ -17,10 +17,38 @@ const Home: React.FC = () => {
   return (
     <WrapperDiv>
       <TitleH1>Framer Motion</TitleH1>
-      <p>
+      <MessageP
+        animate={{
+          opacity: [0, 1, 1],
+        }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+          times: [0, 0.5, 1],
+        }}
+      >
         sample-dragで2.0.0以前のversionだとhomeに戻る時errorが出る <br />
         一方で、2.0.0以上だとsample-motion-valuesが機能しない
-      </p>
+        <br />
+        githubにissueが上がっていたので、そのうち修正されそう →
+        <a
+          href="https://github.com/framer/motion/pull/633"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          これ
+        </a>
+        や
+        <a
+          href="https://github.com/framer/motion/issues/656"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          これ
+        </a>
+        <br />
+        本サイトではver1.10.0を利用している
+      </MessageP>
       <ListUl>
         {pages.map((page, index) => (
           <li key={index}>
@@ -36,7 +64,7 @@ const Home: React.FC = () => {
                   times: [0, 0.5, 1],
                 }}
               >
-                {page.replace("-", " ")}
+                {page.split("-").join(" ")}
               </ListA>
             </Link>
           </li>
@@ -64,6 +92,8 @@ const TitleH1 = styled.h1`
 const ListUl = styled.ul`
   margin-top: 16px;
 `;
+
+const MessageP = styled(motion.p)``;
 
 const ListA = styled(motion.a)`
   display: inline-block;

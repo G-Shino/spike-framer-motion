@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 const Page: React.FC = () => {
   return (
     <WrapperDiv>
-      <MainDiv whileHover={{ scale: 1.2 }} whileTap={{ rotate: 90 }} />
+      <MainDiv whileHover={{ scale: 1.2 }} whileTap={{ rotate: 90 }}>
+        Tap Me !
+      </MainDiv>
     </WrapperDiv>
   );
 };
@@ -22,6 +24,9 @@ const WrapperDiv = styled.div`
 `;
 
 const MainDiv = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 150px;
   background-color: white;
