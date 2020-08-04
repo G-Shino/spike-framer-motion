@@ -34,12 +34,13 @@ const WrapperDiv = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(#0000ff 0%, #00ffff);
+  background: linear-gradient(#0000ff 0%, #00ffff 100%);
 `;
 
 const StyledButton = styled.button`
   margin-bottom: 16px;
   font-size: 1.6rem;
+  color: #0000ff;
   background: none;
   border: none;
   &:focus {

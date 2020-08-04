@@ -18,7 +18,9 @@ const Page: React.FC = () => {
           loop: Infinity,
           repeatDelay: 1,
         }}
-      />
+      >
+        Rolling!
+      </MainDiv>
     </WrapperDiv>
   );
 };
@@ -35,7 +37,11 @@ const WrapperDiv = styled.div`
 `;
 
 const MainDiv = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 150px;
+  color: #9c1aff;
   background-color: white;
 `;

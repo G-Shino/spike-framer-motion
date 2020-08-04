@@ -29,6 +29,7 @@ const MainDiv = styled(motion.div)`
   align-items: center;
   width: 150px;
   height: 150px;
+  color: #df12ee;
   background-color: white;
   border-radius: 20%;
 `;
